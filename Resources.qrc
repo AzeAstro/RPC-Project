@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="Arrows">
+    <file>buttons.png</file>
+    <file>Settings icon.png</file>
+    <file>Left arrow.png</file>
+  </qresource>
+</RCC>
