@@ -749,7 +749,7 @@ class Ui_MainWindow(object):
 #endif // QT_CONFIG(whatsthis)
         self.SmallImageTooltipTextBox.setText("")
         self.CustomButtons.setText(QCoreApplication.translate("MainWindow", u"Custom Buttons", None))
-        self.StartStop.setText(QCoreApplication.translate("MainWindow", u"Start/Stop", None))
+        self.StartStop.setText(QCoreApplication.translate("MainWindow", u"Start", None))
         self.Apply.setText(QCoreApplication.translate("MainWindow", u"Apply", None))
         self.Advanced.setText(QCoreApplication.translate("MainWindow", u"Advanced", None))
         self.AdvancedTitle.setText(QCoreApplication.translate("MainWindow", u"Advanced Settings", None))
