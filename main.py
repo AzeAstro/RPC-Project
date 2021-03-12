@@ -1,5 +1,5 @@
 from PySide2.QtCore import *
-from PySide2.QtGui import *
+import PySide2.QtGui as QtGui
 import PySide2.QtWidgets as QtWidgets
 import UI
 import time
@@ -46,7 +46,7 @@ class MainWindow(QtWidgets.QMainWindow, UI.Ui_MainWindow):
 		self.shadow.setXOffset(0)
 		self.threadpool = QThreadPool()
 		self.shadow.setYOffset(0)
-		self.shadow.setColor(QColor(0, 92, 157, 150))
+		self.shadow.setColor(QtGui.QColor(0, 92, 157, 150))
 		self.ui.Pages.setCurrentWidget(self.ui.MainPage)
 		self.setWindowTitle("Custom Rich Presence")
 		self.ui.IDTextBox.setText(id)
@@ -239,5 +239,8 @@ class MainWindow(QtWidgets.QMainWindow, UI.Ui_MainWindow):
 
 app = QtWidgets.QApplication(sys.argv)
 window = MainWindow()
+QtGui.QFontDatabase.addApplicationFont('./fonts/OpenSans-Regular.ttf')
+QtGui.QFontDatabase.addApplicationFont('./fonts/Raleway-Regular.ttf')
+QtGui.QFontDatabase.addApplicationFont('./fonts/Roboto-Regular.ttf')
 window.show()
 app.exec_()
