@@ -120,7 +120,7 @@ class MainWindow(QtWidgets.QMainWindow, UI.Ui_MainWindow):
 				if partyid!="":
 					kwargs['party_id']=partyid
 				if partysize!="":
-					kwargs['party_size']=partysize
+					kwargs['party_size']=[1,int(partysize)]
 				if chattoken!="":
 					kwargs['join']=chattoken
 				if gametoken!="":
@@ -163,10 +163,8 @@ class MainWindow(QtWidgets.QMainWindow, UI.Ui_MainWindow):
 					messagebox = QtWidgets.QMessageBox.warning(self, 'Custom Presence', 'Invalid ID.Please,check your ID again.', QtWidgets.QMessageBox.Ok)
 				except ConnectionResetError:
 					messagebox = QtWidgets.QMessageBox.warning(self, 'Custom Presence', 'Something went wrong.Recheck your ID/connection.', QtWidgets.QMessageBox.Ok)
-				except pypresence.exceptions.InvalidPipe:
-					messagebox = QtWidgets.QMessageBox.warning(self, 'Custom Presence', 'You need to launch Discord for applying custom presence.', QtWidgets.QMessageBox.Ok)
-				except ConnectionRefusedError:
-					messagebox = QtWidgets.QMessageBox.warning(self, 'Custom Presence', 'You need to launch Discord for applying custom presence.', QtWidgets.QMessageBox.Ok)
+				except Exception:
+					traceback.print_exc()
 			elif started==True:
 				messagebox = QtWidgets.QMessageBox.warning(self, 'Custom Presence', 'Service already running. Use "Apply" button for applying changes.', QtWidgets.QMessageBox.Ok)
 
@@ -220,6 +218,16 @@ class MainWindow(QtWidgets.QMainWindow, UI.Ui_MainWindow):
 						if button2!="" and button2url!="":
 							secondbutton={'label':str(button2),'url':str(button2url)}
 							kwargs["buttons"].append(secondbutton)
+					if partyid!="":
+						kwargs['party_id']=partyid
+					if partysize!="":
+						kwargs['party_size']=[1,int(partysize)]
+					if chattoken!="":
+						kwargs['join']=chattoken
+					if gametoken!="":
+						kwargs['match']=gametoken
+					if spectatetoken!="":
+						kwargs['spectate']=spectatetoken
 					try:
 						rpc.update(**kwargs)
 						started=True
@@ -255,10 +263,8 @@ class MainWindow(QtWidgets.QMainWindow, UI.Ui_MainWindow):
 							messagebox = QtWidgets.QMessageBox.warning(self, 'Custom Presence', 'Enter valid url(With https:// or http://)', QtWidgets.QMessageBox.Ok)
 					except Exception as e:
 						traceback.print_exc()
-					except pypresence.exceptions.InvalidPipe:
-						messagebox = QtWidgets.QMessageBox.warning(self, 'Custom Presence', 'You need to launch Discord for applying custom presence.', QtWidgets.QMessageBox.Ok)
-					except ConnectionRefusedError:
-						messagebox = QtWidgets.QMessageBox.warning(self, 'Custom Presence', 'You need to launch Discord for applying custom presence.', QtWidgets.QMessageBox.Ok)
+					except Exception:
+						traceback.print_exc()
 				elif started==False:
 					messagebox = QtWidgets.QMessageBox.warning(self, 'Custom Presence', 'You need to start service first.', QtWidgets.QMessageBox.Ok)
 			else:
@@ -291,6 +297,16 @@ class MainWindow(QtWidgets.QMainWindow, UI.Ui_MainWindow):
 						if button2!="" and button2url!="":
 							secondbutton={'label':str(button2),'url':str(button2url)}
 							kwargs["buttons"].append(secondbutton)
+					if partyid!="":
+						kwargs['party_id']=partyid
+					if partysize!="":
+						kwargs['party_size']=[1,int(partysize)]
+					if chattoken!="":
+						kwargs['join']=chattoken
+					if gametoken!="":
+						kwargs['match']=gametoken
+					if spectatetoken!="":
+						kwargs['spectate']=spectatetoken
 					try:
 						rpc.update(**kwargs)
 						started=True
@@ -326,11 +342,7 @@ class MainWindow(QtWidgets.QMainWindow, UI.Ui_MainWindow):
 							messagebox = QtWidgets.QMessageBox.warning(self, 'Custom Presence', 'Texts can be max 128 characters.', QtWidgets.QMessageBox.Ok)
 						elif "uri" in str(error):
 							messagebox = QtWidgets.QMessageBox.warning(self, 'Custom Presence', 'Enter valid url(With https:// or http://)', QtWidgets.QMessageBox.Ok)
-					except pypresence.exceptions.InvalidPipe:
-						messagebox = QtWidgets.QMessageBox.warning(self, 'Custom Presence', 'You need to launch Discord for applying custom presence.', QtWidgets.QMessageBox.Ok)
-					except ConnectionRefusedError:
-						messagebox = QtWidgets.QMessageBox.warning(self, 'Custom Presence', 'You need to launch Discord for applying custom presence.', QtWidgets.QMessageBox.Ok)
-					except Exception as e:
+					except Exception:
 						traceback.print_exc()
 				elif started==False:
 					messagebox = QtWidgets.QMessageBox.warning(self, 'Custom Presence', 'You need to start service first.', QtWidgets.QMessageBox.Ok)
