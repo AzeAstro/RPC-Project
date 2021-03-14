@@ -359,5 +359,8 @@ class MainWindow(QtWidgets.QMainWindow, UI.Ui_MainWindow):
 
 app = QtWidgets.QApplication(sys.argv)
 window = MainWindow()
+QtGui.QFontDatabase.addApplicationFont("fonts/Raleway-Regular.ttf")
+QtGui.QFontDatabase.addApplicationFont("fonts/OpenSans-Regular.ttf")
+QtGui.QFontDatabase.addApplicationFont("fonts/Roboto-Regular.ttf")
 window.show()
 app.exec_()
