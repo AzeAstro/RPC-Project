@@ -43,7 +43,8 @@ It is advanced invites and join buttons. You can use it if you got real details 
 2)Don't forget to add `https://` or `http://` at the beginning of links.\
 3)you need to start app first,then you can apply changes. \
 4)Rich presence will continue till cmd is open. In Linux and Mac it stops when UI is closed but in Windows not. So,that is why I will make exe version of it.\
-5)If fonts look creepy,then you can manually install fonts in `fonts` folder.
+5)If fonts look creepy,then you can manually install fonts in `fonts` folder.\
+6)You can't use advanced buttons and custom buttons at the same time.
 
 # FAQ
 Q:How can I make application on Discord?\
