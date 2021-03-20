@@ -4,6 +4,7 @@ import PySide2.QtWidgets as QtWidgets
 import UI
 import time
 import Resources
+from datetime import datetime,timezone
 import json
 import sys
 import traceback
@@ -346,8 +347,15 @@ class MainWindow(QtWidgets.QMainWindow, UI.Ui_MainWindow):
 						traceback.print_exc()
 				elif started==False:
 					messagebox = QtWidgets.QMessageBox.warning(self, 'Custom Presence', 'You need to start service first.', QtWidgets.QMessageBox.Ok)
-		
-		
+		def convert():
+			hour=int(self.ui.Hour.currentText())
+			minute=int(self.ui.Minute.currentText())
+			second=int(self.ui.Second.currentText())
+			result=datetime(datetime.now().year,datetime.now().month,datetime.now().day,hour=hour,minute=minute,second=second,microsecond=0,tzinfo=timezone.utc).timestamp()
+			self.ui.EpochResult.setText(str(int(result)))
+		self.ui.ConvertButton.clicked.connect(lambda: convert())
+		self.ui.EpochToMain.clicked.connect(lambda: self.ui.Pages.setCurrentWidget(self.ui.MainPage))
+		self.ui.MainToEpoch.clicked.connect(lambda: self.ui.Pages.setCurrentWidget(self.ui.HumanToEpoch))
 		self.ui.CustomButtons.clicked.connect(lambda: self.ui.Pages.setCurrentWidget(self.ui.ButtonsPage))
 		self.ui.AdvancedToMain.clicked.connect(lambda: self.ui.Pages.setCurrentWidget(self.ui.MainPage))
 		self.ui.ButtonsToMain.clicked.connect(lambda: self.ui.Pages.setCurrentWidget(self.ui.MainPage))

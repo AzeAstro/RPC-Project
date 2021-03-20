@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'UI.ui'
+## Form generated from reading UI file 'UIwUNgWF.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -294,7 +294,7 @@ class Ui_MainWindow(object):
 
         self.Buttons = QFrame(self.MainPage)
         self.Buttons.setObjectName(u"Buttons")
-        self.Buttons.setGeometry(QRect(0, 461, 491, 61))
+        self.Buttons.setGeometry(QRect(0, 451, 481, 71))
         self.Buttons.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 0), stop:1 rgba(255, 255, 255, 0));\n"
 "border:none;")
         self.Buttons.setFrameShape(QFrame.StyledPanel)
@@ -310,6 +310,7 @@ class Ui_MainWindow(object):
 "border-radius: 14px;\n"
 "border-color:rgb(0, 0, 0) ;\n"
 "padding: 4px;\n"
+"color:rgb(0, 0, 0);\n"
 "font: 9pt \"Roboto\";")
         icon = QIcon()
         icon.addFile(u":/Arrows/buttons.png", QSize(), QIcon.Normal, QIcon.Off)
@@ -327,6 +328,8 @@ class Ui_MainWindow(object):
 "border-radius: 14px;\n"
 "border-color:rgb(0, 0, 0) ;\n"
 "padding: 4px;\n"
+"border-radius: 12px;\n"
+"color:rgb(0, 0, 0);\n"
 "font: 9pt \"Roboto\";")
         self.StartStop.setIconSize(QSize(20, 20))
 
@@ -338,13 +341,28 @@ class Ui_MainWindow(object):
         self.Apply.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 0), stop:1 rgba(255, 255, 255, 0));\n"
 "border-style: outset;\n"
 "border-width: 2px;\n"
-"border-radius: 14px;\n"
+"border-radius: 12px;\n"
 "border-color:rgb(0, 0, 0) ;\n"
 "padding: 4px;\n"
+"color:rgb(0, 0, 0);\n"
 "font: 9pt \"Roboto\";")
         self.Apply.setIconSize(QSize(20, 20))
 
         self.horizontalLayout_20.addWidget(self.Apply)
+
+        self.MainToEpoch = QPushButton(self.Buttons)
+        self.MainToEpoch.setObjectName(u"MainToEpoch")
+        self.MainToEpoch.setCursor(QCursor(Qt.PointingHandCursor))
+        self.MainToEpoch.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 0), stop:1 rgba(255, 255, 255, 0));\n"
+"border-style: outset;\n"
+"border-width: 2px;\n"
+"border-radius: 12px;\n"
+"border-color:rgb(0, 0, 0) ;\n"
+"padding: 4px;\n"
+"color:rgb(0, 0, 0);\n"
+"font: 9pt \"Roboto\";")
+
+        self.horizontalLayout_20.addWidget(self.MainToEpoch)
 
         self.Advanced = QPushButton(self.Buttons)
         self.Advanced.setObjectName(u"Advanced")
@@ -355,6 +373,7 @@ class Ui_MainWindow(object):
 "border-radius: 15px;\n"
 "border-color:rgb(0, 0, 0) ;\n"
 "padding: 4px;\n"
+"color:rgb(0, 0, 0);\n"
 "font: 9pt \"Roboto\";")
         icon1 = QIcon()
         icon1.addFile(u":/Arrows/Settings icon.png", QSize(), QIcon.Normal, QIcon.Off)
@@ -381,6 +400,7 @@ class Ui_MainWindow(object):
 "border-radius: 15px;\n"
 "border-color:rgb(0, 0, 0) ;\n"
 "padding: 4px;\n"
+"color:rgb(0, 0, 0);\n"
 "font: 9pt \"Roboto\";")
         icon2 = QIcon()
         icon2.addFile(u":/Arrows/Left arrow.png", QSize(), QIcon.Normal, QIcon.Off)
@@ -548,6 +568,7 @@ class Ui_MainWindow(object):
 "border-radius: 15px;\n"
 "border-color:rgb(0, 0, 0) ;\n"
 "padding: 4px;\n"
+"color:rgb(0, 0, 0);\n"
 "font: 9pt \"Roboto\";")
         self.ButtonsToMain.setIcon(icon2)
         self.ButtonsToMain.setIconSize(QSize(20, 20))
@@ -687,11 +708,236 @@ class Ui_MainWindow(object):
         self.verticalLayout_5.addWidget(self.SecondButtonFrame)
 
         self.Pages.addWidget(self.ButtonsPage)
+        self.HumanToEpoch = QWidget()
+        self.HumanToEpoch.setObjectName(u"HumanToEpoch")
+        self.EpochTitle = QLabel(self.HumanToEpoch)
+        self.EpochTitle.setObjectName(u"EpochTitle")
+        self.EpochTitle.setGeometry(QRect(170, 20, 148, 23))
+        self.EpochTitle.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 0), stop:1 rgba(255, 255, 255, 0));\n"
+"font: 14pt \"Raleway\";")
+        self.EpochInfo = QLabel(self.HumanToEpoch)
+        self.EpochInfo.setObjectName(u"EpochInfo")
+        self.EpochInfo.setGeometry(QRect(80, 70, 321, 37))
+        self.EpochInfo.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 0), stop:1 rgba(255, 255, 255, 0));\n"
+"font: 11pt \"Raleway\";")
+        self.Selector = QFrame(self.HumanToEpoch)
+        self.Selector.setObjectName(u"Selector")
+        self.Selector.setGeometry(QRect(90, 170, 321, 71))
+        self.Selector.setStyleSheet(u"QFrame{\n"
+"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));\n"
+"border:none;\n"
+"}\n"
+"QComboBox{\n"
+"color:rgb(246, 245, 244);\n"
+"}")
+        self.Selector.setFrameShape(QFrame.StyledPanel)
+        self.Selector.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_16 = QHBoxLayout(self.Selector)
+        self.horizontalLayout_16.setObjectName(u"horizontalLayout_16")
+        self.Hour = QComboBox(self.Selector)
+        self.Hour.addItem("")
+        self.Hour.addItem("")
+        self.Hour.addItem("")
+        self.Hour.addItem("")
+        self.Hour.addItem("")
+        self.Hour.addItem("")
+        self.Hour.addItem("")
+        self.Hour.addItem("")
+        self.Hour.addItem("")
+        self.Hour.addItem("")
+        self.Hour.addItem("")
+        self.Hour.addItem("")
+        self.Hour.addItem("")
+        self.Hour.addItem("")
+        self.Hour.addItem("")
+        self.Hour.addItem("")
+        self.Hour.addItem("")
+        self.Hour.addItem("")
+        self.Hour.addItem("")
+        self.Hour.addItem("")
+        self.Hour.addItem("")
+        self.Hour.addItem("")
+        self.Hour.addItem("")
+        self.Hour.addItem("")
+        self.Hour.setObjectName(u"Hour")
+
+        self.horizontalLayout_16.addWidget(self.Hour)
+
+        self.Minute = QComboBox(self.Selector)
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.addItem("")
+        self.Minute.setObjectName(u"Minute")
+
+        self.horizontalLayout_16.addWidget(self.Minute)
+
+        self.Second = QComboBox(self.Selector)
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.addItem("")
+        self.Second.setObjectName(u"Second")
+
+        self.horizontalLayout_16.addWidget(self.Second)
+
+        self.indicator = QLabel(self.HumanToEpoch)
+        self.indicator.setObjectName(u"indicator")
+        self.indicator.setGeometry(QRect(100, 150, 301, 19))
+        self.indicator.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 0), stop:1 rgba(255, 255, 255, 0));\n"
+"font: 11pt \"Raleway\";")
+        self.EpochToMain = QPushButton(self.HumanToEpoch)
+        self.EpochToMain.setObjectName(u"EpochToMain")
+        self.EpochToMain.setGeometry(QRect(20, 20, 81, 41))
+        self.EpochToMain.setCursor(QCursor(Qt.PointingHandCursor))
+        self.EpochToMain.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 0), stop:1 rgba(255, 255, 255, 0));\n"
+"border-style: outset;\n"
+"border-width: 2px;\n"
+"border-radius: 15px;\n"
+"border-color:rgb(0, 0, 0) ;\n"
+"padding: 4px;\n"
+"color:rgb(0, 0, 0);\n"
+"font: 9pt \"Roboto\";")
+        self.EpochToMain.setIcon(icon2)
+        self.EpochToMain.setIconSize(QSize(20, 20))
+        self.ConvertButton = QPushButton(self.HumanToEpoch)
+        self.ConvertButton.setObjectName(u"ConvertButton")
+        self.ConvertButton.setGeometry(QRect(180, 340, 111, 31))
+        self.ConvertButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.ConvertButton.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 255, 255, 0), stop:1 rgba(255, 255, 255, 0));\n"
+"border-style: outset;\n"
+"border-width: 2px;\n"
+"border-radius: 15px;\n"
+"border-color:rgb(0, 0, 0) ;\n"
+"padding: 4px;\n"
+"color:rgb(0, 0, 0);\n"
+"font: 9pt \"Roboto\";")
+        self.ConvertButton.setIconSize(QSize(20, 20))
+        self.EpochResult = QLineEdit(self.HumanToEpoch)
+        self.EpochResult.setObjectName(u"EpochResult")
+        self.EpochResult.setGeometry(QRect(102, 281, 291, 31))
+        self.EpochResult.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));\n"
+"border:none;")
+        self.EpochResult.setEchoMode(QLineEdit.Normal)
+        self.EpochResult.setReadOnly(True)
+        self.Pages.addWidget(self.HumanToEpoch)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
 
-        self.Pages.setCurrentIndex(2)
+        self.Pages.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -700,7 +946,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
 #if QT_CONFIG(whatsthis)
-        self.MainTitle.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>This is the app that allows you to change your rich presence easily with GUI.</p></body></html>", None))
+        self.MainTitle.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>This is the app that allows you to change your rich presence easyly with GUI.</p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
         self.MainTitle.setText(QCoreApplication.translate("MainWindow", u"Custom Rich Presence", None))
         self.IDText.setText(QCoreApplication.translate("MainWindow", u"ID of RP Application:", None))
@@ -751,6 +997,7 @@ class Ui_MainWindow(object):
         self.CustomButtons.setText(QCoreApplication.translate("MainWindow", u"Custom Buttons", None))
         self.StartStop.setText(QCoreApplication.translate("MainWindow", u"Start", None))
         self.Apply.setText(QCoreApplication.translate("MainWindow", u"Apply", None))
+        self.MainToEpoch.setText(QCoreApplication.translate("MainWindow", u"Converter", None))
         self.Advanced.setText(QCoreApplication.translate("MainWindow", u"Advanced", None))
         self.AdvancedTitle.setText(QCoreApplication.translate("MainWindow", u"Advanced Settings", None))
         self.AdvancedToMain.setText(QCoreApplication.translate("MainWindow", u"Back", None))
@@ -802,5 +1049,159 @@ class Ui_MainWindow(object):
         self.SecondButtonLinkTextBox.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Can be empty</p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
         self.SecondButtonLinkTextBox.setText("")
+        self.EpochTitle.setText(QCoreApplication.translate("MainWindow", u"Epoch Converter", None))
+        self.EpochInfo.setText(QCoreApplication.translate("MainWindow", u"This converts human time to Epoch(Unix) time. \n"
+"You will use it in start time and end time.", None))
+        self.Hour.setItemText(0, QCoreApplication.translate("MainWindow", u"0", None))
+        self.Hour.setItemText(1, QCoreApplication.translate("MainWindow", u"1", None))
+        self.Hour.setItemText(2, QCoreApplication.translate("MainWindow", u"2", None))
+        self.Hour.setItemText(3, QCoreApplication.translate("MainWindow", u"3", None))
+        self.Hour.setItemText(4, QCoreApplication.translate("MainWindow", u"4", None))
+        self.Hour.setItemText(5, QCoreApplication.translate("MainWindow", u"5", None))
+        self.Hour.setItemText(6, QCoreApplication.translate("MainWindow", u"6", None))
+        self.Hour.setItemText(7, QCoreApplication.translate("MainWindow", u"7", None))
+        self.Hour.setItemText(8, QCoreApplication.translate("MainWindow", u"8", None))
+        self.Hour.setItemText(9, QCoreApplication.translate("MainWindow", u"9", None))
+        self.Hour.setItemText(10, QCoreApplication.translate("MainWindow", u"10", None))
+        self.Hour.setItemText(11, QCoreApplication.translate("MainWindow", u"11", None))
+        self.Hour.setItemText(12, QCoreApplication.translate("MainWindow", u"12", None))
+        self.Hour.setItemText(13, QCoreApplication.translate("MainWindow", u"13", None))
+        self.Hour.setItemText(14, QCoreApplication.translate("MainWindow", u"14", None))
+        self.Hour.setItemText(15, QCoreApplication.translate("MainWindow", u"15", None))
+        self.Hour.setItemText(16, QCoreApplication.translate("MainWindow", u"16", None))
+        self.Hour.setItemText(17, QCoreApplication.translate("MainWindow", u"17", None))
+        self.Hour.setItemText(18, QCoreApplication.translate("MainWindow", u"18", None))
+        self.Hour.setItemText(19, QCoreApplication.translate("MainWindow", u"19", None))
+        self.Hour.setItemText(20, QCoreApplication.translate("MainWindow", u"20", None))
+        self.Hour.setItemText(21, QCoreApplication.translate("MainWindow", u"21", None))
+        self.Hour.setItemText(22, QCoreApplication.translate("MainWindow", u"22", None))
+        self.Hour.setItemText(23, QCoreApplication.translate("MainWindow", u"23", None))
+
+        self.Minute.setItemText(0, QCoreApplication.translate("MainWindow", u"0", None))
+        self.Minute.setItemText(1, QCoreApplication.translate("MainWindow", u"1", None))
+        self.Minute.setItemText(2, QCoreApplication.translate("MainWindow", u"2", None))
+        self.Minute.setItemText(3, QCoreApplication.translate("MainWindow", u"3", None))
+        self.Minute.setItemText(4, QCoreApplication.translate("MainWindow", u"4", None))
+        self.Minute.setItemText(5, QCoreApplication.translate("MainWindow", u"5", None))
+        self.Minute.setItemText(6, QCoreApplication.translate("MainWindow", u"6", None))
+        self.Minute.setItemText(7, QCoreApplication.translate("MainWindow", u"7", None))
+        self.Minute.setItemText(8, QCoreApplication.translate("MainWindow", u"8", None))
+        self.Minute.setItemText(9, QCoreApplication.translate("MainWindow", u"9", None))
+        self.Minute.setItemText(10, QCoreApplication.translate("MainWindow", u"10", None))
+        self.Minute.setItemText(11, QCoreApplication.translate("MainWindow", u"11", None))
+        self.Minute.setItemText(12, QCoreApplication.translate("MainWindow", u"12", None))
+        self.Minute.setItemText(13, QCoreApplication.translate("MainWindow", u"13", None))
+        self.Minute.setItemText(14, QCoreApplication.translate("MainWindow", u"14", None))
+        self.Minute.setItemText(15, QCoreApplication.translate("MainWindow", u"15", None))
+        self.Minute.setItemText(16, QCoreApplication.translate("MainWindow", u"16", None))
+        self.Minute.setItemText(17, QCoreApplication.translate("MainWindow", u"17", None))
+        self.Minute.setItemText(18, QCoreApplication.translate("MainWindow", u"18", None))
+        self.Minute.setItemText(19, QCoreApplication.translate("MainWindow", u"19", None))
+        self.Minute.setItemText(20, QCoreApplication.translate("MainWindow", u"20", None))
+        self.Minute.setItemText(21, QCoreApplication.translate("MainWindow", u"21", None))
+        self.Minute.setItemText(22, QCoreApplication.translate("MainWindow", u"22", None))
+        self.Minute.setItemText(23, QCoreApplication.translate("MainWindow", u"23", None))
+        self.Minute.setItemText(24, QCoreApplication.translate("MainWindow", u"24", None))
+        self.Minute.setItemText(25, QCoreApplication.translate("MainWindow", u"25", None))
+        self.Minute.setItemText(26, QCoreApplication.translate("MainWindow", u"26", None))
+        self.Minute.setItemText(27, QCoreApplication.translate("MainWindow", u"27", None))
+        self.Minute.setItemText(28, QCoreApplication.translate("MainWindow", u"28", None))
+        self.Minute.setItemText(29, QCoreApplication.translate("MainWindow", u"29", None))
+        self.Minute.setItemText(30, QCoreApplication.translate("MainWindow", u"30", None))
+        self.Minute.setItemText(31, QCoreApplication.translate("MainWindow", u"31", None))
+        self.Minute.setItemText(32, QCoreApplication.translate("MainWindow", u"32", None))
+        self.Minute.setItemText(33, QCoreApplication.translate("MainWindow", u"33", None))
+        self.Minute.setItemText(34, QCoreApplication.translate("MainWindow", u"34", None))
+        self.Minute.setItemText(35, QCoreApplication.translate("MainWindow", u"35", None))
+        self.Minute.setItemText(36, QCoreApplication.translate("MainWindow", u"36", None))
+        self.Minute.setItemText(37, QCoreApplication.translate("MainWindow", u"37", None))
+        self.Minute.setItemText(38, QCoreApplication.translate("MainWindow", u"38", None))
+        self.Minute.setItemText(39, QCoreApplication.translate("MainWindow", u"39", None))
+        self.Minute.setItemText(40, QCoreApplication.translate("MainWindow", u"40", None))
+        self.Minute.setItemText(41, QCoreApplication.translate("MainWindow", u"41", None))
+        self.Minute.setItemText(42, QCoreApplication.translate("MainWindow", u"42", None))
+        self.Minute.setItemText(43, QCoreApplication.translate("MainWindow", u"43", None))
+        self.Minute.setItemText(44, QCoreApplication.translate("MainWindow", u"44", None))
+        self.Minute.setItemText(45, QCoreApplication.translate("MainWindow", u"45", None))
+        self.Minute.setItemText(46, QCoreApplication.translate("MainWindow", u"46", None))
+        self.Minute.setItemText(47, QCoreApplication.translate("MainWindow", u"47", None))
+        self.Minute.setItemText(48, QCoreApplication.translate("MainWindow", u"48", None))
+        self.Minute.setItemText(49, QCoreApplication.translate("MainWindow", u"49", None))
+        self.Minute.setItemText(50, QCoreApplication.translate("MainWindow", u"50", None))
+        self.Minute.setItemText(51, QCoreApplication.translate("MainWindow", u"51", None))
+        self.Minute.setItemText(52, QCoreApplication.translate("MainWindow", u"52", None))
+        self.Minute.setItemText(53, QCoreApplication.translate("MainWindow", u"53", None))
+        self.Minute.setItemText(54, QCoreApplication.translate("MainWindow", u"54", None))
+        self.Minute.setItemText(55, QCoreApplication.translate("MainWindow", u"55", None))
+        self.Minute.setItemText(56, QCoreApplication.translate("MainWindow", u"56", None))
+        self.Minute.setItemText(57, QCoreApplication.translate("MainWindow", u"57", None))
+        self.Minute.setItemText(58, QCoreApplication.translate("MainWindow", u"58", None))
+        self.Minute.setItemText(59, QCoreApplication.translate("MainWindow", u"59", None))
+
+        self.Second.setItemText(0, QCoreApplication.translate("MainWindow", u"0", None))
+        self.Second.setItemText(1, QCoreApplication.translate("MainWindow", u"1", None))
+        self.Second.setItemText(2, QCoreApplication.translate("MainWindow", u"2", None))
+        self.Second.setItemText(3, QCoreApplication.translate("MainWindow", u"3", None))
+        self.Second.setItemText(4, QCoreApplication.translate("MainWindow", u"4", None))
+        self.Second.setItemText(5, QCoreApplication.translate("MainWindow", u"5", None))
+        self.Second.setItemText(6, QCoreApplication.translate("MainWindow", u"6", None))
+        self.Second.setItemText(7, QCoreApplication.translate("MainWindow", u"7", None))
+        self.Second.setItemText(8, QCoreApplication.translate("MainWindow", u"8", None))
+        self.Second.setItemText(9, QCoreApplication.translate("MainWindow", u"9", None))
+        self.Second.setItemText(10, QCoreApplication.translate("MainWindow", u"10", None))
+        self.Second.setItemText(11, QCoreApplication.translate("MainWindow", u"11", None))
+        self.Second.setItemText(12, QCoreApplication.translate("MainWindow", u"12", None))
+        self.Second.setItemText(13, QCoreApplication.translate("MainWindow", u"13", None))
+        self.Second.setItemText(14, QCoreApplication.translate("MainWindow", u"14", None))
+        self.Second.setItemText(15, QCoreApplication.translate("MainWindow", u"15", None))
+        self.Second.setItemText(16, QCoreApplication.translate("MainWindow", u"16", None))
+        self.Second.setItemText(17, QCoreApplication.translate("MainWindow", u"17", None))
+        self.Second.setItemText(18, QCoreApplication.translate("MainWindow", u"18", None))
+        self.Second.setItemText(19, QCoreApplication.translate("MainWindow", u"19", None))
+        self.Second.setItemText(20, QCoreApplication.translate("MainWindow", u"20", None))
+        self.Second.setItemText(21, QCoreApplication.translate("MainWindow", u"21", None))
+        self.Second.setItemText(22, QCoreApplication.translate("MainWindow", u"22", None))
+        self.Second.setItemText(23, QCoreApplication.translate("MainWindow", u"23", None))
+        self.Second.setItemText(24, QCoreApplication.translate("MainWindow", u"24", None))
+        self.Second.setItemText(25, QCoreApplication.translate("MainWindow", u"25", None))
+        self.Second.setItemText(26, QCoreApplication.translate("MainWindow", u"26", None))
+        self.Second.setItemText(27, QCoreApplication.translate("MainWindow", u"27", None))
+        self.Second.setItemText(28, QCoreApplication.translate("MainWindow", u"28", None))
+        self.Second.setItemText(29, QCoreApplication.translate("MainWindow", u"29", None))
+        self.Second.setItemText(30, QCoreApplication.translate("MainWindow", u"30", None))
+        self.Second.setItemText(31, QCoreApplication.translate("MainWindow", u"31", None))
+        self.Second.setItemText(32, QCoreApplication.translate("MainWindow", u"32", None))
+        self.Second.setItemText(33, QCoreApplication.translate("MainWindow", u"33", None))
+        self.Second.setItemText(34, QCoreApplication.translate("MainWindow", u"34", None))
+        self.Second.setItemText(35, QCoreApplication.translate("MainWindow", u"35", None))
+        self.Second.setItemText(36, QCoreApplication.translate("MainWindow", u"36", None))
+        self.Second.setItemText(37, QCoreApplication.translate("MainWindow", u"37", None))
+        self.Second.setItemText(38, QCoreApplication.translate("MainWindow", u"38", None))
+        self.Second.setItemText(39, QCoreApplication.translate("MainWindow", u"39", None))
+        self.Second.setItemText(40, QCoreApplication.translate("MainWindow", u"40", None))
+        self.Second.setItemText(41, QCoreApplication.translate("MainWindow", u"41", None))
+        self.Second.setItemText(42, QCoreApplication.translate("MainWindow", u"42", None))
+        self.Second.setItemText(43, QCoreApplication.translate("MainWindow", u"43", None))
+        self.Second.setItemText(44, QCoreApplication.translate("MainWindow", u"44", None))
+        self.Second.setItemText(45, QCoreApplication.translate("MainWindow", u"45", None))
+        self.Second.setItemText(46, QCoreApplication.translate("MainWindow", u"46", None))
+        self.Second.setItemText(47, QCoreApplication.translate("MainWindow", u"47", None))
+        self.Second.setItemText(48, QCoreApplication.translate("MainWindow", u"48", None))
+        self.Second.setItemText(49, QCoreApplication.translate("MainWindow", u"49", None))
+        self.Second.setItemText(50, QCoreApplication.translate("MainWindow", u"50", None))
+        self.Second.setItemText(51, QCoreApplication.translate("MainWindow", u"51", None))
+        self.Second.setItemText(52, QCoreApplication.translate("MainWindow", u"52", None))
+        self.Second.setItemText(53, QCoreApplication.translate("MainWindow", u"53", None))
+        self.Second.setItemText(54, QCoreApplication.translate("MainWindow", u"54", None))
+        self.Second.setItemText(55, QCoreApplication.translate("MainWindow", u"55", None))
+        self.Second.setItemText(56, QCoreApplication.translate("MainWindow", u"56", None))
+        self.Second.setItemText(57, QCoreApplication.translate("MainWindow", u"57", None))
+        self.Second.setItemText(58, QCoreApplication.translate("MainWindow", u"58", None))
+        self.Second.setItemText(59, QCoreApplication.translate("MainWindow", u"59", None))
+
+        self.indicator.setText(QCoreApplication.translate("MainWindow", u"Hour:               Minute:             Second:", None))
+        self.EpochToMain.setText(QCoreApplication.translate("MainWindow", u"Back", None))
+        self.ConvertButton.setText(QCoreApplication.translate("MainWindow", u"Convert", None))
+        self.EpochResult.setText("")
     # retranslateUi
 
