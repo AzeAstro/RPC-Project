@@ -22,7 +22,7 @@ Now in UI(User Interface):\
 *Check FAQ for more details.*\
 `Status` - Can be anything lower than 128 characters.\
 `Details` - Can be anything lower than 128 characters.\
-`Start time` - This is Epoch(Unix) time that will be used here.I plan to add a converter menu for it too but you can use [Epoch time converter](https://www.epochconverter.com/) for now.\
+`Start time` - This is Epoch(Unix) time that will be used here.UPDATE: **Now epoch converter is available in application UI.**\
 `End time` - Same as `Start time` but this time it will show when you will end.(if time passed then it will show `00:00 Left`)\
 `Large image's name` - Here you enter the name of the image that you uploaded on the RP application(This app can't upload local images to rich presence.Check FAQ for more details.)\
 `Large image's tooltip` - Here you enter tooltip for large image.Here how it will look:\
